@@ -6,21 +6,48 @@ include("feed.php");
 <html>
 	<head>
 		<title>Markup Madness</title>
+		<meta name="description" content="An epic tournament bracket based upon the athletic websites that represent the teams in the 2013 NCAA March Madness tournament" />
 		<link rel="stylesheet" href="style.css" title="" type="text/css" media="screen" charset="utf-8">
 		<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js"></script>
-		
+	
 		
 	</head>
 	<body>
-		
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=254788744559812";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="topbar">
+			<div class="social-box">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="A tournament based on this year's #MarchMadness team websites" data-via="Tyler_Dow" data-related="MattSchlobohm" data-hashtags="markupmadness">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<div class="fb-like" data-href="http://MarkupMadness.com" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+
+			</div>
+			<p>A project by <a href="http://twitter.com/MattSchlobohm">@MattSchlobohm</a> and <a href="http://twitter.com/tyler_dow">@Tyler_Dow</a></p>
+		</div>
 		<header>
-			<h1>MARKUP MADNESS</h1>
-			<p>If college athletic websites had a tournament based on speed & responsiveness, this is how it would go down</p>
+		</div>
+			<img src="markup-madness.png" alt="Markup Madness Logo" />
+			<div class="info-box">
+				<h3>A tournament for the websites behind the madness</h3>
+				<p>You are seeing the results of a hard fought battle between the websites that represent the teams at the 2013 NCAA Basketball Tournament. These websites were tested on performance, responsiveness, use of flash &amp; load time.</p>
+				<p>Click on any team below to see the details.</p>
+			</div>
 		</header>
+
+<div class="color-codes">
+<span class="code-green">&nbsp;  mimics NCAA tournament outcome</span>
+<span class="code-red">&nbsp;  different from NCAA tournament outcome</span>
+</div>
 
 <div class="container">
 	<div class="container-half">
@@ -35,7 +62,7 @@ include("feed.php");
 		<div class="matchup1">
 			<div id="content">
 				<a rel="louisville.html" class="team louisville">Louisville <span><?php echo $teamrow[7] ?></span></a>
-				<a  rel="blank.html" class="team blank">Rnd1 Winner</a>
+				<a  rel="blank.html" class="team blank">N. Carolina AT</a>
 			</div>
 		</div>
 		
@@ -63,7 +90,7 @@ include("feed.php");
 		<div class="matchup1">
 			<div id="content">
 				<a  rel="memphis.html" class="team memphis">Memphis</a>
-				<a  rel="blank.html" class="team blank">RND1 WINNER</a>
+				<a  rel="blank.html" class="team blank">St. Mary</a>
 			</div>
 		</div>
 		
@@ -119,7 +146,7 @@ include("feed.php");
 		<div class="matchup1">
 			<div id="content">
 				<a  rel="kansasst.html" class="team kansasst">Kansas St.</a>
-				<a  rel="blank.html" class="team blank">Round1 Winner</a>
+				<a  rel="blank.html" class="team blank">La Salle</a>
 			</div>
 		</div>
 		
@@ -158,19 +185,19 @@ include("feed.php");
 <div class="region2">
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="louisville.html" class="team louisville">Louisville</a>
-			<a  rel="missouri.html" class="team missouri">Missouri</a>
+			<a  rel="louisville.html" class="team louisville correct">Louisville</a>
+			<a  rel="missouri.html" class="team missouri incorrect">Missouri</a>
 		</div>
 	</div>
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="oregon.html" class="team oregon">Oregon</a>
-			<a  rel="newmexst.html" class="team newmexst">New Mex. St.</a>
+			<a  rel="oregon.html" class="team oregon correct">Oregon</a>
+			<a  rel="newmexst.html" class="team newmexst incorrect">New Mex. St.</a>
 		</div>
 	</div>
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="memphis.html" class="team memphis correct">Memphis</a>
+			<a  rel="blank.html" class="team incorrect">St. Mary</a>
 			<a  rel="valparaiso.html" class="team valparaiso incorrect">Valparaiso</a>
 		</div>
 	</div>
@@ -192,13 +219,13 @@ include("feed.php");
 	<div class="matchup2">
 		<div id="content">
 			<a  rel="wisconsin.html" class="team wisconsin">Wisconsin</a>
-			<a  rel="blank.html" class="team blank">Round1 Winner</a>
+			<a  rel="blank.html" class="team blank">La Salle</a>
 		</div>
 	</div>
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="belmont.html" class="team belmont">Belmont</a>
-			<a  rel="harvard.html" class="team harvard">Harvard</a>
+			<a  rel="belmont.html" class="team belmont incorrect">Belmont</a>
+			<a  rel="harvard.html" class="team harvard correct">Harvard</a>
 		</div>
 	</div>
 	<div class="matchup2">
@@ -235,7 +262,7 @@ include("feed.php");
 	<div class="matchup3">
 		<div id="content">
 			<a  rel="gonzaga.html" class="team gonzaga">Gonzaga</a>
-			<a  rel="blank.html" class="team blank">Round1 Winner</a>
+			<a  rel="blank.html" class="team blank">La Salle</a>
 		</div>
 	</div>
 	<div class="matchup3">
@@ -364,8 +391,8 @@ include("feed.php");
 	</div>
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="vcu.html" class="team vcu">VCU</a>
-			<a  rel="sdstate.html" class="team sdstate">S. Dak. St.</a>
+			<a  rel="vcu.html" class="team vcu correct">VCU</a>
+			<a  rel="sdstate.html" class="team sdstate incorrect">S. Dak. St.</a>
 		</div>
 	</div>
 	<div class="matchup2">
@@ -391,8 +418,8 @@ include("feed.php");
 	</div>
 	<div class="matchup2">
 		<div id="content">
-			<a  rel="california.html" class="team california">California</a>
-			<a  rel="syracuse.html" class="team syracuse">Syracuse</a>
+			<a  rel="california.html" class="team california correct">California</a>
+			<a  rel="syracuse.html" class="team syracuse correct">Syracuse</a>
 		</div>
 	</div>
 	<div class="matchup2">
@@ -486,7 +513,7 @@ include("feed.php");
 		<div class="matchup1">
 			<div id="content">
 				<a  rel="indiana.html" class="team indiana">Indiana</a>
-				<a  rel="blank.html" class="team blank">Rnd1 Win</a>
+				<a  rel="blank.html" class="team blank">JMU</a>
 			</div>
 		</div>
 		
@@ -559,7 +586,13 @@ include("feed.php");
 </div><!-- ends container -->
 
 
+<footer>
+<h3>Shout Outs:</h3>
+<p><a href="https://twitter.com/Tom_from_NY">Tom Callahan</a> for the "Markup Madness" name</p>
+<p>Craig Thompson for building <a href="http://craigsworks.com/projects/qtip/">qTip</a></p>
+<p><a href="http://sportslogos.net">SportsLogos.net</a> for the awesome school logos</p>
 
+</footer>
 
 
 
@@ -577,7 +610,6 @@ $(document).ready(function()
       {
          content: {
             // Set the text to an image HTML string with the correct src URL to the loading image you want to use
-            text: '<img class="throbber" src="/projects/qtip/images/throbber.gif" alt="Loading..." />',
             url: "animals.json.php?team=" + $(this).text(), // Use the rel attribute of each element for the url to load
             title: {
                text: $(this).text(), // Give the tooltip a title using each elements text
