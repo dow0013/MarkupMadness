@@ -4,6 +4,8 @@
 
 Markup Madness is an attempt to measure and visualize just that. What you get is the web version of the NCAA men's basketball tournament: [Markup Madness](http://markupmadness.com "Markup Madness")
 
+These websites were tested and graded on performance, responsiveness, use of flash & load time. The better the score, the further the team advances in the tournament.
+
 
 *Conceived, Designed, and Developed by [Matt Schlobohm](http://schlobohm.net "Matt Schlobohm") & [Tyler Dow](http://tylerdow.com "Tyler Dow")*
 
