@@ -1,5 +1,5 @@
 #[Markup Madness](http://markupmadness.com "Markup Madness")
-###*Ever wonder if there is a correlation between an March Madness basketball team's performance on the web and on the court?*
+###*Ever wonder if there is a correlation between a March Madness basketball team's performance on the web and on the court?*
 
 
 Markup Madness is an attempt to measure and visualize just that. What you get is the web version of the NCAA men's basketball tournament: [Markup Madness](http://markupmadness.com "Markup Madness")
