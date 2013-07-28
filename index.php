@@ -1,7 +1,3 @@
-<?php
-include("feed.php");
-
-?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,16 +5,16 @@ include("feed.php");
 		<meta name="description" content="An epic tournament bracket based upon the athletic websites that represent the teams in the 2013 NCAA March Madness tournament" />
 		<link rel="stylesheet" href="style.css" title="" type="text/css" media="screen" charset="utf-8">
 		<link href='http://fonts.googleapis.com/css?family=Quantico:400,700' rel='stylesheet' type='text/css'>
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
-		<script type="text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js"></script>
-	
-		
-	</head>
+        <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.0/jquery.qtip.min.css"/>
+
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/qtip2/2.1.0/jquery.qtip.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    </head>
 	<body>
 	<div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>
+    (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
@@ -30,9 +26,8 @@ include("feed.php");
 				<a href="https://twitter.com/share" class="twitter-share-button" data-text="A tournament based on this year's #MarchMadness team websites" data-via="Tyler_Dow" data-related="MattSchlobohm" data-hashtags="markupmadness">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				<div class="fb-like" data-href="http://MarkupMadness.com" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
-
 			</div>
-			<p>A project by <a href="http://twitter.com/MattSchlobohm">@MattSchlobohm</a> and <a href="http://twitter.com/tyler_dow">@Tyler_Dow</a></p>
+			<p>A project by <a href="http://schlobohm.net" target="_blank">Matt Schlobohm</a> and <a href="http://tylerdow.com" target="_blank">Tyler Dow</a></p>
 		</div>
 		<header>
 		</div>
@@ -50,597 +45,406 @@ include("feed.php");
 </div>
 
 <div class="container">
-	<div class="container-half">
 
-<!------------------------------------------------------------>		
-<!--------------------- MIDWEST ------------------------------>	
-<!------------------------------------------------------------>		
+<div class="container-half">
 	<div class="column">
-	<h3>Round 2</h3>
-	<div class="region">
-		<h2>Midwest</h2>
-		<div class="matchup1">
-			<div id="content">
-				<a rel="louisville.html" class="team louisville">Louisville <span><?php echo $teamrow[7] ?></span></a>
-				<a  rel="blank.html" class="team blank">N. Carolina AT</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="coloradost.html" class="team coloradost">Colorado St.</a>
-				<a  rel="missouri.html" class="team missouri">Missouri</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="oklahomast.html" class="team oklahomast">Oklahoma St.</a>
-				<a  rel="oregon.html" class="team oregon">Oregon</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="saintlouis.html" class="team saintlouis">Saint Louis</a>
-				<a  rel="newmexst.html" class="team newmexst">New Mex. St.</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="memphis.html" class="team memphis">Memphis</a>
-				<a  rel="blank.html" class="team blank">St. Mary</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="michiganst.html" class="team michiganst">Michigan St.</a>
-				<a  rel="valparaiso.html" class="team valparaiso">Valparaiso</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="creighton.html" class="team creighton">Creighton</a>
-				<a  rel="cincinnati.html" class="team cincinnati">Cincinnati</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="duke.html" class="team duke">Duke</a>
-				<a  rel="albany.html" class="team albany">Albany</a>
-			</div>
-		</div>
-	</div><!-- end region -->
+        <h3>Round 2</h3>
 
+	    <div id="round2-midwest-container" class="region">
+            <h2>Midwest</h2>
+	    </div>
 
-<!------------------------------------------------------------>		
-<!----------------------- WEST ------------------------------->	
-<!------------------------------------------------------------>		
-	<div class="region">
-		<h2>West</h2>
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="gonzaga.html" class="team gonzaga">Gonzaga</a>
-				<a  rel="southernu.html" class="team southernu">Southernu</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="pittsburgh.html" class="team pittsburgh">Pittsburgh.</a>
-				<a  rel="wichitast.html" class="team wichitast">Wichita St.</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="wisconsin.html" class="team wisconsin">Wisconsin</a>
-				<a  rel="olemiss.html" class="team olemiss">Ole Miss</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="kansasst.html" class="team kansasst">Kansas St.</a>
-				<a  rel="blank.html" class="team blank">La Salle</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="arizona.html" class="team arizona">Arizona</a>
-				<a  rel="belmont.html" class="team belmont">Belmont</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="newmexico.html" class="team newmexico">New Mexico</a>
-				<a  rel="harvard.html" class="team harvard">Harvard</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="notredame.html" class="team notredame">Notre Dame</a>
-				<a  rel="iowast.html" class="team iowast">Iowa St</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="ohiost.html" class="team ohiost">Ohio St</a>
-				<a  rel="iona.html" class="team iona">Iona</a>
-			</div>
-		</div>
-	</div><!-- end region -->
-	</div><!-- end column -->
+	    <div id="round2-west-container" class="region">
+		    <h2>West</h2>
+	    </div>
+    </div>
 
-<div class="column">
-<h3>Round 3</h3>
-<div class="region2">
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="louisville.html" class="team louisville correct">Louisville</a>
-			<a  rel="missouri.html" class="team missouri incorrect">Missouri</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="oregon.html" class="team oregon correct">Oregon</a>
-			<a  rel="newmexst.html" class="team newmexst incorrect">New Mex. St.</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="blank.html" class="team incorrect">St. Mary</a>
-			<a  rel="valparaiso.html" class="team valparaiso incorrect">Valparaiso</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="creighton.html" class="team creighton">Creighton</a>
-			<a  rel="duke.html" class="team duke">Duke</a>
-		</div>
-	</div>
-	
+    <div class="column">
+        <h3>Round 3</h3>
+
+        <div id="round3-midwest-container" class="region2">
+        </div>
+
+        <div id="round3-west-container" class="region2">
+        </div>
+    </div>
+
+    <div class="column">
+        <h3>Region Semi</h3>
+
+        <div id="regionalsemi-midwest-container" class="region3">
+        </div>
+
+        <div id="regionalsemi-west-container" class="region3" style="margin-top:175px;">
+        </div>
+    </div>
+
+    <div class="column">
+        <h3>Region Final</h3>
+
+        <div id="regionalfinal-midwest-container" class="region4">
+        </div>
+
+        <div id="regionalfinal-west-container" class="region4" style="margin-top:100px">
+        </div>
+    </div>
+
+    <div class="column">
+        <h3>Nat. Semis</h3>
+        <div id="natsemis-left-container" class="region5">
+        </div>
+    </div>
 </div>
-<div class="region2">
-	<div class="matchup2" style="margin-top:35px;">
-		<div id="content">
-			<a  rel="gonzaga.html" class="team gonzaga correct">Gonzaga</a>
-			<a  rel="wichitast.html" class="team wichitast correct">Wichita St.</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="wisconsin.html" class="team wisconsin">Wisconsin</a>
-			<a  rel="blank.html" class="team blank">La Salle</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="belmont.html" class="team belmont incorrect">Belmont</a>
-			<a  rel="harvard.html" class="team harvard correct">Harvard</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="notredame.html" class="team notredame">Notre Dame</a>
-			<a  rel="iona.html" class="team iona">Iona</a>
-		</div>
-	</div>
-	
-</div>
-
-
-
-
-</div><!-- end column -->
-
-<div class="column">
-<h3>Region Semi</h3>
-<div class="region3">
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="louisville.html" class="team louisville">Louisville</a>
-			<a  rel="oregon.html" class="team oregon">Oregon</a>
-		</div>
-	</div>
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="valparaiso.html" class="team valparaiso">Valparaiso</a>
-			<a  rel="duke.html" class="team duke">Duke</a>
-		</div>
-	</div>
-</div>
-<div class="region3" style="margin-top:175px;">
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="gonzaga.html" class="team gonzaga">Gonzaga</a>
-			<a  rel="blank.html" class="team blank">La Salle</a>
-		</div>
-	</div>
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="belmont.html" class="team belmont">Belmont</a>
-			<a  rel="iona.html" class="team iona">Iona</a>
-		</div>
-	</div>
-</div>
-
-</div><!-- end column -->
-
-<div class="column">
-<h3>Region Final</h3>
-<div class="region4">
-	<div class="matchup4">
-		<div id="content">
-			<a  rel="oregon.html" class="team oregon">Oregon</a>
-			<a  rel="valparaiso.html" class="team valparaiso">Valparaiso</a>
-		</div>
-	</div>
-</div>
-<div class="region4" style="margin-top:100px">
-	<div class="matchup4">
-		<div id="content">
-			<a  rel="gonzaga.html" class="team gonzaga" style="margin-top:320px;">Gonzaga</a>
-			<a  rel="iona.html" class="team iona">Iona</a>
-		</div>
-	</div>
-</div>
-</div><!-- end column -->
-
-<div class="column">
-<h3>Nat. Semis</h3>
-<div class="region5">
-	<div class="matchup5">
-		<div id="content">
-			<a  rel="oregon.html" class="team oregon">Oregon</a>
-			<a  rel="gonzaga.html" class="team2 gonzaga">Gonzaga</a>
-			<a  rel="gonzaga.html" class="team gonzaga">Gonzaga</a>
-		</div>
-	</div>
-</div>
-
-</div><!-- end column -->
-
-</div><!-- ends container half -->
 
 
 <div class="container-half right">
+    <div class="column">
+        <h3>Nat. Semis</h3>
+        <div id="natsemis-right-container" class="region5">
+        </div>
+    </div>
 
-<div class="column">
-<h3>Nat. Semis</h3>
-<div class="region5">
-	<div class="matchup5">
-		<div id="content">
-			<a  rel="florida.html" class="team florida">Florida</a>
-			<a  rel="butler.html" class="team2 butler">Butler</a>
-			<a  rel="butler.html" class="team butler">Butler</a>
-		</div>
-	</div>
+    <div class="column">
+        <h3>Region Final</h3>
+
+        <div id="regionalfinal-south-container" class="region4">
+        </div>
+
+        <div id="regionalfinal-east-container" class="region4" style="margin-top:100px">
+        </div>
+    </div>
+
+
+    <div class="column">
+        <h3>Region Semi</h3>
+
+        <div id="regionalsemi-south-container" class="region3">
+        </div>
+
+        <div id="regionalsemi-east-container" class="region3" style="margin-top:175px;">
+        </div>
+    </div>
+
+    <div class="column">
+        <h3>Round 3</h3>
+
+        <div id="round3-south-container" class="region2">
+        </div>
+
+        <div id="round3-east-container"  class="region2">
+        </div>
+
+    </div>
+
+    <div class="column">
+        <h3>Round 2</h3>
+
+        <div id="round2-south-container" class="region right">
+            <h2>South</h2>
+        </div>
+
+        <div id="round2-east-container" class="region right">
+            <h2>East</h2>
+        </div>
+    </div>
+
+    </div>
 </div>
-</div><!-- end column -->
-
-<div class="column">
-<h3>Region Final</h3>
-<div class="region4">
-	<div class="matchup4">
-		<div id="content">
-			<a  rel="vcu.html" class="team vcu">VCU</a>
-			<a  rel="florida.html" class="team florida">Florida</a>
-		</div>
-	</div>
-</div>
-<div class="region4">
-	<div class="matchup4">
-		<div id="content">
-			<a  rel="temple.html" class="team temple" style="margin-top:320px;">Temple</a>
-			<a  rel="butler.html" class="team butler">Butler</a>
-		</div>
-	</div>
-</div>
-</div><!-- end column -->
-
-<div class="column">
-<h3>Region Semi</h3>
-<div class="region3">
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="ncarolina.html" class="team ncarolina">N. Carolina</a>
-			<a  rel="vcu.html" class="team vcu">VCU</a>
-		</div>
-	</div>
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="florida.html" class="team florida">Florida</a>
-			<a  rel="fgcu.html" class="team fgcu">FGCU</a>
-		</div>
-	</div>
-</div>
-<div class="region3" style="margin-top:175px;">
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="temple.html" class="team temple">Temple</a>
-			<a  rel="syracuse.html" class="team syracuse">Syracuse</a>
-		</div>
-	</div>
-	<div class="matchup3">
-		<div id="content">
-			<a  rel="butler.html" class="team butler">Butler</a>
-			<a  rel="colorado.html" class="team colorado">Colorado</a>
-		</div>
-	</div>
-</div>
-
-</div><!-- end column -->
-
-<div class="column">
-<h3>Round 3</h3>
-<div class="region2">
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="kansas.html" class="team kansas">Kansas</a>
-			<a  rel="ncarolina.html" class="team ncarolina">N. Carolina</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="vcu.html" class="team vcu correct">VCU</a>
-			<a  rel="sdstate.html" class="team sdstate incorrect">S. Dak. St.</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="ucla.html" class="team ucla">UCLA</a>
-			<a  rel="florida.html" class="team florida">Florida</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="oklahoma.html" class="team oklahoma">Oklahoma</a>
-			<a  rel="fgcu.html" class="team fgcu">FGCU</a>
-		</div>
-	</div>
-	
-</div>
-<div class="region2">
-	<div class="matchup2" style="margin-top:35px;">
-		<div id="content">
-			<a  rel="indiana.html" class="team indiana">Indiana</a>
-			<a  rel="temple.html" class="team temple">Temple</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="california.html" class="team california correct">California</a>
-			<a  rel="syracuse.html" class="team syracuse correct">Syracuse</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="butler.html" class="team butler correct">Butler</a>
-			<a  rel="davidson.html" class="team davidson incorrect">Davidson</a>
-		</div>
-	</div>
-	<div class="matchup2">
-		<div id="content">
-			<a  rel="colorado.html" class="team colorado">Colorado</a>
-			<a  rel="pacific.html" class="team pacific">Pacific</a>
-		</div>
-	</div>
-	
-</div>
-
-</div><!-- end column -->
-
-
-<!------------------------------------------------------------>		
-<!--------------------- MIDWEST ------------------------------>	
-<!------------------------------------------------------------>		
-	<div class="column">
-	<h3>Round 2</h3>
-	<div class="region right">
-		<h2>South</h2>
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="kansas.html" class="team kansas">Kansas</a>
-				<a  rel="westernky.html" class="team westernky">Western Ky.</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="ncarolina.html" class="team ncarolina">N. Carolina</a>
-				<a  rel="villanova.html" class="team villanova">Villanova</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="vcu.html" class="team vcu">VCU</a>
-				<a  rel="akron.html" class="team akron">Akron</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="michigan.html" class="team michigan">Michigan</a>
-				<a  rel="sdstate.html" class="team sdstate">S. Dak. St.</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="ucla.html" class="team ucla">UCLA</a>
-				<a  rel="minnesota.html" class="team minnesota">Minnesota</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="florida.html" class="team florida">Florida</a>
-				<a  rel="nwesternst.html" class="team nwesternst">Nwestern St.</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="sandiegost.html" class="team sandiegost">San Diego St.</a>
-				<a  rel="oklahoma.html" class="team oklahoma">Oklahoma</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="georgetown.html" class="team georgetown">Georgetown</a>
-				<a  rel="fgcu.html" class="team fgcu">FGCU</a>
-			</div>
-		</div>
-	</div><!-- end region -->
-
-
-<!------------------------------------------------------------>		
-<!----------------------- WEST ------------------------------->	
-<!------------------------------------------------------------>		
-	<div class="region">
-		<h2>East</h2>
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="indiana.html" class="team indiana">Indiana</a>
-				<a  rel="blank.html" class="team blank">JMU</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="ncstate.html" class="team ncstate">N.C. State</a>
-				<a  rel="temple.html" class="team temple">Temple</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="unlv.html" class="team unlv">UNLV</a>
-				<a  rel="california.html" class="team california">California</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="syracuse.html" class="team syracuse">Syracuse</a>
-				<a  rel="montana.html" class="team montana">Montana</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="butler.html" class="team butler">Butler</a>
-				<a  rel="bucknell.html" class="team bucknell">Bucknell</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="marquette.html" class="team marquette">Marquette</a>
-				<a  rel="davidson.html" class="team davidson">Davidson</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="illinois.html" class="team illinois">Illinois</a>
-				<a  rel="colorado.html" class="team colorado">Colorado</a>
-			</div>
-		</div>
-		
-		<div class="matchup1">
-			<div id="content">
-				<a  rel="miamifl.html" class="team miamifl">Miami (FL)</a>
-				<a  rel="pacific.html" class="team pacific">Pacific</a>
-			</div>
-		</div>
-	</div><!-- end region -->
-	</div><!-- end column -->
-
-</div><!-- ends container half -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div><!-- ends container -->
 
 
 <footer>
+<p>Wanna look at the code for this site on <a href="https://github.com/MattSchlobohm/MarkupMadness" target="_blank">GitHub</a>?</p>
 <h3>Shout Outs:</h3>
-<p><a href="https://twitter.com/Tom_from_NY">Tom Callahan</a> for the "Markup Madness" name</p>
-<p>Craig Thompson for building <a href="http://craigsworks.com/projects/qtip/">qTip</a></p>
-<p><a href="http://sportslogos.net">SportsLogos.net</a> for the awesome school logos</p>
+<p><a href="https://twitter.com/Tom_from_NY" target="_blank">Tom Callahan</a> for the "Markup Madness" name</p>
+<p>Craig Thompson for building <a href="http://qtip2.com/" target="_blank">qTip2</a></p>
+<p><a href="http://sportslogos.net" target="_blank">SportsLogos.net</a> for the awesome school logos</p>
 
 </footer>
 
 
+<div id="html-templates" style="display: none;">
+    <div id="matchup-template">
+        <div class="{{classes}}">
+            <div class="content">
+                <a id="{{college1.id}}-{{classes}}" class="team">{{college1.name}}</a>
+                <a id="{{college2.id}}-{{classes}}" class="team">{{college2.name}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="college-detail-template">
+        <div class="headline">
+            <img class="logo" src="{{thumb}}" />
+            <div class="score">
+                <span>Site Score</span>
+                <h2>{{rank}}</h2>
+            </div>
+        </div>
+        <div class="info">
+            <li>Http Requests: <span>{{http_requests}}</span></li>
+            <li>Pieces of Flash: <span>{{flash_pieces}}</span></li>
+            <li>Mobile Site: <span>{{mobile_site}}</span></li>
+            <li>Load Time: <span>{{load_time}}s</span></li>
+        </div>
+        <span class="link"><a href="{{website}}" target="_blank">{{website}}</a></span>
+    </div>
+</div>
 
 
 <script type="text/javascript">
-// Create the tooltips only on document load
-$(document).ready(function() 
-{
-   
-   
-   // Use the each() method to gain access to each elements attributes
-   $('#content a[rel]').each(function()
-   {
-      $(this).qtip(
-      {
-         content: {
-            // Set the text to an image HTML string with the correct src URL to the loading image you want to use
-            url: "animals.json.php?team=" + $(this).text(), // Use the rel attribute of each element for the url to load
-            title: {
-               text: $(this).text(), // Give the tooltip a title using each elements text
-               button: 'Close' // Show a close link in the title
+
+    var COLLEGES = <?php
+        //TODO: EXTRACT THIS LOGIC INTO APPROPRIATE PHP IDIOM
+        //TODO: LOOK FOR FILE LOCALLY, BUT IF IT ISN"T FOUND THERE, FETCH VIA THE GOOGLE DOC URL
+        //$csvData = file_get_contents("http://docs.google.com/spreadsheet/ccc?key=0AgFmNAMpK3RhdHpaSW1nX3p3VWpyd25MUnRXdmtYYmc&output=csv");
+        $csvData = file_get_contents("markupmadness-colleges.csv", JSON_PRETTY_PRINT);
+
+        $rows = str_getcsv($csvData, "\n");
+
+        $headerRow = array();
+        $dataRows = array();
+
+        foreach($rows as $row) {
+            $row = str_getcsv($row, ",");
+            $row[0] = trim($row[0]);
+            if (!empty($row[0])) {
+                if ($row[0] !== "id") {
+                    array_push($dataRows, $row);
+                } else {
+                    $headerRow = $row;
+                }
             }
-         },
-         position: {
-            corner: {
-               target: 'bottomMiddle', // Position the tooltip above the link
-               tooltip: 'topMiddle'
-            },
-            adjust: {
-               screen: true // Keep the tooltip on-screen at all times
+        }
+
+        $jsonMap = array("headers"=>$headerRow, "data"=>$dataRows);
+
+        echo json_encode($jsonMap, JSON_UNESCAPED_SLASHES);
+?>
+
+$(document).ready(function() {
+    //TODO: THIS IS A MONSTER; LOOK FOR WAYS OF BETTER ORGANIZATION / TIDYING / REVIEW / DRY-ing
+
+    var REGION_ORDER = ['midwest', 'south', 'east', 'west'];
+
+    // ROUND2 / INITIAL SETUP
+    $.each(REGION_ORDER, function(index, value) {
+        var $container = $('#round2-' + value + '-container');
+        var dataStartIndex = 16 * index;
+        for (var i = dataStartIndex; i < dataStartIndex + 16; i+=2) {
+            var matchup = {
+                classes: "matchup1"
             }
-         },
-         show: { 
-            when: 'click', 
-            solo: true // Only show one tooltip at a time
-         },
-         hide: 'unfocus',
-         style: {
-            tip: true, // Apply a speech bubble tip to the tooltip at the designated tooltip corner
-            border: {
-               width: 0,
-               radius: 4
+
+            for (var j = 0; j < 2; j++) {
+                var college = {};
+                for (var k = 0; k < COLLEGES.headers.length; k++) {
+                    college[COLLEGES.headers[k]] = COLLEGES.data[i+j][k];
+                }
+                switch (parseInt(college.mobile_site)) {
+                    case 1:
+                        college.mobile_site = "Yes";
+                        break;
+                    case 2:
+                        college.mobile_site = "Optional";
+                        break;
+                    case 3:
+                        college.mobile_site = "No";
+                        break;
+                    default:
+                        college.mobile_site = "N/A";
+                        break;
+                }
+                matchup['college' + (j+1)] = college;
+            }
+
+            var elem = $(Mustache.render($('#matchup-template').html(), matchup)).appendTo($container);
+
+            elem.find('a').each(function(j, v) {
+                $(v).data(matchup['college' + (j+1)]);
+            });
+        }
+    });
+
+    // ROUND 3
+    $.each(REGION_ORDER, function(i, v) {
+        var $container = $('#round3-' + v + '-container');
+        var $matchups = $('#round2-' + v + '-container').children('div');
+
+        var winnerData = [];
+        for (var j = 0; j < $matchups.length; j++) {
+            var teams = $($matchups[j]).find('a');
+            var winner = $(teams[0]).data();
+
+            if (winner.rank < $(teams[1]).data().rank) {
+                winner = $(teams[1]).data();
+            }
+
+            winnerData.push(winner);
+        }
+
+        var matchup = {
+            classes: "matchup2"
+        }
+        for (var j = 0; j < winnerData.length; j+=2) {
+            matchup.college1 = winnerData[j];
+            matchup.college2 = winnerData[j+1];
+            $container.append(Mustache.render($('#matchup-template').html(), matchup));
+        }
+    });
+
+    // REGIONAL SEMIS
+    $.each(REGION_ORDER, function(i, v) {
+        var $container = $('#regionalsemi-' + v + '-container');
+        var $matchups = $('#round3-' + v + '-container').children('div');
+
+        var winnerData = [];
+        for (var j = 0; j < $matchups.length; j++) {
+            var teams = $($matchups[j]).find('a');
+            var winner = $('#' + $(teams[0]).attr('id').split('-')[0] + '-matchup1').data();
+            var loser = $('#' + $(teams[1]).attr('id').split('-')[0] + '-matchup1').data();
+
+            if (winner.rank < loser.rank) {
+                var tmp = winner;
+                winner = loser;
+                loser = tmp;
+            }
+
+            winnerData.push(winner);
+        }
+
+        var matchup = {
+            classes: "matchup3"
+        }
+        for (var j = 0; j < winnerData.length; j+=2) {
+            matchup.college1 = winnerData[j];
+            matchup.college2 = winnerData[j+1];
+            $container.append(Mustache.render($('#matchup-template').html(), matchup));
+        }
+    });
+
+    // REGIONAL FINALS
+    $.each(REGION_ORDER, function(i, v) {
+        var $container = $('#regionalfinal-' + v + '-container');
+        var $matchups = $('#regionalsemi-' + v + '-container').children('div');
+
+        var winnerData = [];
+        for (var j = 0; j < $matchups.length; j++) {
+            var teams = $($matchups[j]).find('a');
+            var winner = $('#' + $(teams[0]).attr('id').split('-')[0] + '-matchup1').data();
+            var loser = $('#' + $(teams[1]).attr('id').split('-')[0] + '-matchup1').data();
+
+            if (winner.rank < loser.rank) {
+                var tmp = winner;
+                winner = loser;
+                loser = tmp;
+            }
+
+            winnerData.push(winner);
+        }
+
+        var matchup = {
+            classes: "matchup4"
+        }
+        for (var j = 0; j < winnerData.length; j+=2) {
+            matchup.college1 = winnerData[j];
+            matchup.college2 = winnerData[j+1];
+            $container.append(Mustache.render($('#matchup-template').html(), matchup));
+        }
+    });
+
+    // NAT SEMIS
+    $.each(REGION_ORDER, function(i, v) {
+        var $matchups = $('#regionalfinal-' + v + '-container').children('div');
+        var $container = $('#natsemis-' + (v.toLowerCase().indexOf("west") === -1 ? "right" : "left") + '-container');
+
+        var winnerData = [];
+        for (var j = 0; j < $matchups.length; j++) {
+            var teams = $($matchups[j]).find('a');
+            var winner = $('#' + $(teams[0]).attr('id').split('-')[0] + '-matchup1').data();
+            var loser = $('#' + $(teams[1]).attr('id').split('-')[0] + '-matchup1').data();
+
+            if (winner.rank < loser.rank) {
+                var tmp = winner;
+                winner = loser;
+                loser = tmp;
+            }
+
+            winnerData.push(winner);
+        }
+
+        var matchup = {
+            classes: "matchup5"
+        }
+        for (var j = 0; j < winnerData.length; j+=2) {
+            matchup.college1 = winnerData[j];
+            $(Mustache.render($('#matchup-template').html(), matchup)).appendTo($container).find('a').last().remove();
+        }
+    });
+
+    // FINALS
+    $.each(['left', 'right'], function(i, v) {
+        var $container = $('#natsemis-' + v + '-container');
+        var teams = $container.find('a');
+
+        var team1Rank = $('#' + $(teams[0]).attr('id').split('-')[0] + '-matchup1').data().rank;
+        var team2Rank = $('#' + $(teams[1]).attr('id').split('-')[0] + '-matchup1').data().rank;
+
+        var winnerIndex = 0;
+        if (team1Rank < team2Rank) {
+            winnerIndex = 1;
+        }
+
+        $(teams[0]).after($(teams[winnerIndex]).clone().addClass('team2'));
+    });
+
+
+    for (var i = 2; i < 6; i++) {
+        $('.matchup' + i).find('.team').each(function(j, v) {
+            var lastRound = $('#' + $(this).attr('id').split('-')[0] + '-matchup1').data().actual_last_round;
+            if (lastRound <= i) {
+                $(this).addClass('incorrect');
+            } else {
+                $(this).addClass('correct');
+            }
+        });
+    }
+
+    $('.container').find('a.team').each(function(i, v) {
+        var data = $('#' + $(this).attr('id').split('-')[0] + '-matchup1').data();
+        $(this).qtip({
+            content: {
+                title: {
+                    text: function(api) {
+                        return data.name;
+                    },
+                    button: "Close"
+                },
+                text: function(api) {
+                    return Mustache.render($('#college-detail-template').html(), data);
+                }
             },
-            name: 'light', // Use the default light style
-            width: 300 // Set the tooltip width
-         }
-      })
-   });
+            position: {
+                viewport: $(window),
+                my: 'top center',
+                at: 'bottom center',
+                adjust: {
+                    method: 'shift none'
+                }
+            },
+            show: {
+                event: 'click'
+            },
+            hide: {
+                event: 'click'
+            },
+            style: {
+                classes: 'qtip-light',
+                tip: {
+                    radius: 4
+                }
+            }
+        });
+    });
 });
 </script>
 		

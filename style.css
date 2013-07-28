@@ -110,34 +110,34 @@ header p {font-size: .9em;margin-top:0;}
 
 .region2 .matchup2:first-child {margin-top:15px;}
 
-.matchup2 #content a {margin-top: 40px;}
-.matchup2 #content a:first-child {margin-top: 0px;}
+.matchup2 .content a {margin-top: 40px;}
+.matchup2 .content a:first-child {margin-top: 0px;}
 
 .region3 {margin: 117px 0 0 0;padding-top: 8px;}
 
 .region3 .matchup3 {margin-top: 110px;}
 .region3 .matchup3:first-child {margin: 0px;}
 
-.region3 .matchup3 #content a {margin-top: 110px;}
-.region3 .matchup3 #content a:first-child {margin: 0px;}
+.region3 .matchup3 .content a {margin-top: 110px;}
+.region3 .matchup3 .content a:first-child {margin: 0px;}
 
-.region4 .matchup4 #content a {margin-top: 247px;}
-.region4 .matchup4 #content a:first-child {margin-top: 195px;}
+.region4 .matchup4 .content a {margin-top: 247px;}
+.region4 .matchup4 .content a:first-child {margin-top: 195px;}
 
-.region5 .matchup5 #content a {margin-top: 285px;}
-.region5 .matchup5 #content a:first-child {margin-top: 340px;}
-
-
+.region5 .matchup5 .content a {margin-top: 285px;}
+.region5 .matchup5 .content a:first-child {margin-top: 340px;}
 
 
-#content .team {
+
+
+.content .team {
 	width: 95%;
 	border-radius: 5px;
 	background: #ccc;
 	padding: 7px;
 	box-sizing: border-box;
 	color: #484848;
-	text-decoration: none; 
+	text-decoration: none;
 	font-size: .6em;
 	display: block;
 	clear: both;
@@ -159,10 +159,10 @@ header p {font-size: .9em;margin-top:0;}
 .correct {border-color: #299a0b !important;}
 .incorrect {border-color: #962c2a !important;}
 
-#content .team:hover {cursor: pointer;}
-.right #content .team {border-left: none;border-right:5px solid;}
+.content .team:hover {cursor: pointer;}
+.right .content .team {border-left: none;border-right:5px solid;}
 
-#content .team2 {
+.content .team2 {
 	width: 98%;
 	border-radius: 5px;
 	background: #515151;
