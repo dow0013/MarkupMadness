@@ -126,10 +126,11 @@ header p {font-size: .9em;margin-top:0;}
 
 .region4 .matchup4 .content a {margin-top: 247px;}
 .region4 .matchup4 .content a:first-child {margin-top: 195px;}
-
 .region4.lower-half { margin-top: 326px; }
+
 .region5 .matchup5 .content a {margin-top: 285px;}
-.region5 .matchup5 .content a:first-child {margin-top: 340px;}
+.region5 .matchup5:first-child .content a:first-child {margin-top: 340px;}
+.region5 .matchup5:last-child .content a { margin-top: 290px; }
 
 
 
