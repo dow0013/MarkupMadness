@@ -65,7 +65,7 @@
         <div id="round3-midwest-container" class="region2">
         </div>
 
-        <div id="round3-west-container" class="region2">
+        <div id="round3-west-container" class="region2 lower-half">
         </div>
     </div>
 
@@ -85,7 +85,7 @@
         <div id="regionalfinal-midwest-container" class="region4">
         </div>
 
-        <div id="regionalfinal-west-container" class="region4" style="margin-top:100px">
+        <div id="regionalfinal-west-container" class="region4 lower-half">
         </div>
     </div>
 
@@ -110,7 +110,7 @@
         <div id="regionalfinal-south-container" class="region4">
         </div>
 
-        <div id="regionalfinal-east-container" class="region4" style="margin-top:100px">
+        <div id="regionalfinal-east-container" class="region4 lower-half">
         </div>
     </div>
 
@@ -131,7 +131,7 @@
         <div id="round3-south-container" class="region2">
         </div>
 
-        <div id="round3-east-container"  class="region2">
+        <div id="round3-east-container"  class="region2 lower-half">
         </div>
 
     </div>
@@ -440,7 +440,8 @@ $(document).ready(function() {
             style: {
                 classes: 'qtip-light',
                 tip: {
-                    radius: 4
+                    width: 14,
+                    height: 14
                 }
             }
         });

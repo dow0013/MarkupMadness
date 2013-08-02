@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5 {margin: 0;}
 
 header {
 	width: 100%;
-	direction: block;
+	display: block;
 	position: relative;
 	margin-top: 55px;
 	padding-bottom: 20px;
@@ -109,6 +109,9 @@ header p {font-size: .9em;margin-top:0;}
 }
 
 .region2 .matchup2:first-child {margin-top:15px;}
+.region2.lower-half {
+    margin-top: 90px;
+}
 
 .matchup2 .content a {margin-top: 40px;}
 .matchup2 .content a:first-child {margin-top: 0px;}
@@ -124,6 +127,7 @@ header p {font-size: .9em;margin-top:0;}
 .region4 .matchup4 .content a {margin-top: 247px;}
 .region4 .matchup4 .content a:first-child {margin-top: 195px;}
 
+.region4.lower-half { margin-top: 326px; }
 .region5 .matchup5 .content a {margin-top: 285px;}
 .region5 .matchup5 .content a:first-child {margin-top: 340px;}
 
@@ -178,7 +182,6 @@ header p {font-size: .9em;margin-top:0;}
 }
 
 .logo {
-display: block;
 margin-bottom: 6px;
 height: auto;
 width: 140px;
@@ -186,7 +189,7 @@ display: inline-block;
 vertical-align: top;
 }
 .score {display: inline-block;vertical-align: top;width: 120px;text-align: center;}
-.score h2 {font-size: 45px;}
+.score h2 {font-size: 45px; line-height: normal;}
 .info {list-style: none;margin-left: 5px;}
 .info span {font-size: 20px;}
 .link {width: 100%;box-sizing: border-box;background-color: #36467b;display: inline-block;text-align: center;padding: 2px;margin-top: 5px;}
@@ -205,3 +208,14 @@ footer p {margin: 0;font-size: 12px;color: #d0d0d0;}
 footer a {color:#6883b0;}
 footer a:hover {color:#5e8dea;}
 
+/* BEGIN: overrides to base qtip stylesheet */
+div.qtip {
+    max-width: inherit;
+    line-height: inherit;
+    font-size: inherit;
+}
+
+div.qtip-default {
+    border-width: 4px;
+}
+/* ENDS: overrides to base qtip stylesheet */
