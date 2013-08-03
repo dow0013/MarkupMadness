@@ -26,8 +26,7 @@ module.exports = function(grunt) {
                     host: 'markupmadness.com'
                 },
                 src: 'build',
-                dest: '/html/.',
-                keep: ['/html/old']
+                dest: 'html'
             }
         }
     });
