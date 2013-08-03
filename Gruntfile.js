@@ -12,8 +12,27 @@ module.exports = function(grunt) {
                     { expand: true, src: ['*.html'], dest: 'build/' }
                 ]
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    { expand: true, src: ['*.png', '*.ico', '*.jpg', '.htaccess'], dest: 'build/' }
+                ]
+            }
+        },
+        ftpush: {
+            build: {
+                auth: {
+                    host: 'markupmadness.com'
+                },
+                src: 'build',
+                dest: '/html/.',
+                keep: ['/html/old']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-ftpush');
 };
