@@ -1,6 +1,0 @@
-<?php 
-
-$minn = "Minnesota";
-
-
-?>
